@@ -1,0 +1,32 @@
+<md-card  *ngFor="let item of items | async"> 
+	<div class="container">
+		<div class="row middle-xs">
+			<div class="col-md-3">
+				<h2>{{item.name}}</h2>
+			</div>
+			<div class="col-md-1">
+				<md-checkbox (ngModelChange)="check($event, item)" [ngModel]="item.checked"></md-checkbox>
+			</div>
+			<div class="col-md-3">
+				<md-input-container>
+		  		<input mdInput placeholder="Количество/кг" value="">
+				</md-input-container>
+			</div>
+			<div class="col-md-3">
+				<md-input-container>
+		  		<input mdInput placeholder="Комментарии" value="">
+				</md-input-container>
+			</div>
+			<div class="col-md-2">
+				<h4>{{item.cost}}</h4>
+			</div>
+		</div>
+	</div>	
+</md-card>
+
+
+
+<md-card>
+	Итоговая стоимость:
+	<span>{{cart}}</span>
+</md-card>

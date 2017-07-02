@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<app-list></app-list>
+
+
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    Название: {{item.name}}
+    Цена: {{item.cost}}
+  </li>
+</ul>

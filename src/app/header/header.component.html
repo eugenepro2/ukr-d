@@ -1,0 +1,31 @@
+<md-toolbar>Заявка на пайок
+	<button md-button [mdMenuTriggerFor]="menu"><i class="material-icons">menu</i></button>
+	<md-menu #menu="mdMenu">
+	  <button md-menu-item>Item 1</button>
+	  <button md-menu-item>Item 2</button>
+	</md-menu>
+</md-toolbar>
+
+<div> {{ (user | async)?.uid }} </div>
+<button (click)="login()">Login</button>
+<button (click)="logout()">Logout</button>
+
+<div class="container">
+	<div class="row middle-xs">
+		<div class="col-md-3">
+			<h3>Наименование</h3>
+		</div>
+		<div class="col-md-1">
+			<h3>Выбрать</h3>
+		</div>
+		<div class="col-md-3">
+			<h3><span mdTooltip="Производитель, марка">Количество/кг</span></h3>
+		</div>
+		<div class="col-md-3">
+			<h3><span mdTooltip="Производитель, марка">Подробности</span></h3>
+		</div>
+		<div class="col-md-2">
+			<h3><span mdTooltip="Производитель, марка">Цена</span></h3>
+		</div>
+	</div>
+</div>
